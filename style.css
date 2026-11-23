@@ -1,0 +1,101 @@
+/* ===========================================================
+   Bài 3.2.1 – Hiệu chỉnh theo sự kiện chuột
+   =========================================================== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+  color: #222;
+  margin: 0;
+  padding: 30px 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+/* 4 khung xếp lưới 2 cột; màn hình hẹp tự xuống 1 cột */
+.luoi {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.khung {
+  background: #fff;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  padding: 16px 20px 20px;
+}
+
+.khung h2 {
+  font-size: 15px;
+  color: #3b4a5a;
+  margin: 0 0 14px;
+}
+
+/* 1. Thẻ div đổi nội dung khi rê chuột */
+#hop-hover {
+  height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3b82c4;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Class được JavaScript thêm vào khi chuột nằm trên thẻ div */
+#hop-hover.dang-hover {
+  background: #e4572e;
+}
+
+/* 2. Vùng ảnh cao cố định để ảnh phóng to không đẩy bố cục */
+.vung-anh {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hinh-anh {
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+/* 3, 4. Nút và ô nhập */
+button {
+  padding: 8px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  background: #3b82c4;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2c6699;
+}
+
+.hang {
+  display: flex;
+  gap: 8px;
+}
+
+#o-chu {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #aab4c0;
+  border-radius: 4px;
+}
